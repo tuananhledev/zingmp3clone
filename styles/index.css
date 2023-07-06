@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './variables.css';
+
+.text-stroke {
+   -webkit-text-stroke: 1.5px white;
+}
+.text-stroke-1 {
+   -webkit-text-stroke: 1px #4a90e2;
+}
+.text-stroke-2 {
+   -webkit-text-stroke: 1px #50e3c2;
+}
+.text-stroke-3 {
+   -webkit-text-stroke: 1px #e35050;
+}
+
+/* base  */
+@layer components {
+   body {
+      width: 100%;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.5;
+      overflow: hidden;
+   }
+   body *::-webkit-scrollbar {
+      width: 6px;
+   }
+   *::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      box-shadow: inset 0 0 6px rgb(0 0 0 / 50%);
+   }
+   *::-webkit-scrollbar-track {
+      box-shadow: inset #fff;
+      border-radius: 4px;
+   }
+   .card-scroll::-webkit-scrollbar {
+      display: none;
+   }
+   button,
+   a {
+      outline: none;
+   }
+
+   /*--------- custom css ---------*/
+   .f-center {
+      @apply flex items-center justify-center;
+   }
+
+   .background-transition {
+      transition: background-color 0.2s ease;
+   }
+
+   /* ----- Header ---- */
+   .btn-navigate {
+      @apply flex items-center justify-center bg-transparent outline-none border-none font-normal py-[1px] pr-[22px] cursor-pointer;
+   }
+
+   .volume {
+      @apply w-[150px] h-[28px] flex items-center px-3 bg-[#353535] absolute -top-10 rounded left-0 -translate-x-1/2;
+   }
+   .volume::before {
+      content: '';
+      width: 100%;
+      height: 16px;
+      background: transparent;
+      position: absolute;
+      top: 100%;
+      left: 0;
+   }
+
+   .spin {
+      animation: spinner 1s infinite linear forwards;
+   }
+   /* search box */
+   @keyframes spinner {
+      100% {
+         transform: translateY(-50%) rotate(360deg);
+      }
+   }
+
+   .text-truncate-1,
+   .text-truncate-2,
+   .text-truncate-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+   }
+   .text-truncate-2 {
+      -webkit-line-clamp: 2;
+   }
+   .text-truncate-3 {
+      -webkit-line-clamp: 3;
+   }
+
+   /* ----- Custom scroll ---- */
+   .view {
+      @apply absolute inset-0 overflow-y-scroll overflow-x-hidden my-0 mx-auto;
+   }
+   .view::-webkit-scrollbar {
+      display: none;
+      appearance: none;
+   }
+   body .mark {
+      -webkit-mask-image: linear-gradient(
+         180deg,
+         hsla(0, 0%, 100%, 0),
+         hsla(0, 0%, 100%, 0.8) 10%,
+         #fff 25%,
+         #fff
+      );
+   }
+
+   /* ----- Gallery ---- */
+   .gallery-transition {
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out,
+         z-index 0s linear 0.25s;
+   }
+
+   .skeleton-animation {
+      animation: skeleton 1s linear infinite;
+   }
+
+   @keyframes skeleton {
+      0% {
+         transform: translate(-50px);
+         opacity: 0;
+      }
+
+      20% {
+         opacity: 0;
+      }
+
+      50% {
+         transform: translate(20px);
+         opacity: 0.3;
+      }
+
+      100% {
+         transform: translate(300px);
+         opacity: 1;
+      }
+   }
+   /* ----- End Gallery ---- */
+}

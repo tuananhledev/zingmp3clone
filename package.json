@@ -1,0 +1,58 @@
+{
+   "name": "zing-music",
+   "version": "0.1.0",
+   "private": true,
+   "scripts": {
+      "start": "react-app-rewired start",
+      "build": "react-app-rewired build",
+      "test": "react-app-rewired test",
+      "eject": "react-app-rewired eject"
+   },
+   "dependencies": {
+      "@reduxjs/toolkit": "^1.9.1",
+      "@testing-library/jest-dom": "^5.16.5",
+      "@testing-library/react": "^13.4.0",
+      "@testing-library/user-event": "^13.5.0",
+      "@tippyjs/react": "^4.2.6",
+      "axios": "^1.2.2",
+      "chart.js": "^4.2.0",
+      "lodash": "^4.17.21",
+      "react": "^18.2.0",
+      "react-chartjs-2": "^5.2.0",
+      "react-custom-scrollbars-2": "^4.5.0",
+      "react-dom": "^18.2.0",
+      "react-icons": "^4.7.1",
+      "react-lazy-load-image-component": "^1.5.6",
+      "react-range": "^1.8.14",
+      "react-redux": "^8.0.5",
+      "react-router-dom": "^6.6.2",
+      "react-scripts": "5.0.1",
+      "react-transition-group": "^4.4.5",
+      "redux-persist": "^6.0.0",
+      "web-vitals": "^2.1.4"
+   },
+   "devDependencies": {
+      "babel-plugin-module-resolver": "^5.0.0",
+      "customize-cra": "^1.0.0",
+      "react-app-rewired": "^2.2.1",
+      "tailwindcss": "^3.2.4"
+   },
+   "eslintConfig": {
+      "extends": [
+         "react-app",
+         "react-app/jest"
+      ]
+   },
+   "browserslist": {
+      "production": [
+         ">0.2%",
+         "not dead",
+         "not op_mini all"
+      ],
+      "development": [
+         "last 1 chrome version",
+         "last 1 firefox version",
+         "last 1 safari version"
+      ]
+   }
+}
